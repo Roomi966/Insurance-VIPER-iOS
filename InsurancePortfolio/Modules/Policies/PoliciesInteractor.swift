@@ -1,0 +1,1 @@
+final class PoliciesInteractor:PoliciesInteracting{func fetch() async->[Policy]{try? await Task.sleep(nanoseconds:250_000_000);return[Policy(name:"Health Protect",number:"HC-48291",status:"Active"),Policy(name:"Travel Secure",number:"TR-19302",status:"Active"),Policy(name:"Motor Plus",number:"MP-70218",status:"Renewal due")]} }

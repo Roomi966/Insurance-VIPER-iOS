@@ -1,0 +1,1 @@
+final class AppContainer{static let shared = AppContainer();private init(){};func inject(_ controller:PoliciesViewController){let interactor = PoliciesInteractor();let presenter = PoliciesPresenter(interactor:interactor);presenter.view = controller;controller.presenter = presenter}}

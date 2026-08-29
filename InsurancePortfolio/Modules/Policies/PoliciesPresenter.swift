@@ -1,0 +1,2 @@
+import Foundation
+final class PoliciesPresenter:PoliciesPresenting{weak var view:PoliciesView?;private let interactor:PoliciesInteracting;init(interactor:PoliciesInteracting){self.interactor = interactor};func viewDidLoad(){view?.showLoading(true);Task{[weak self] in guard let self else{return};let items = await interactor.fetch();await MainActor.run{self.view?.showLoading(false);self.view?.show(items)}}}}
